@@ -1,0 +1,12 @@
+<p>
+  grid works!
+</p>
+<mat-grid-list [cols]="breakpoint" rowHeight="20:20" (window:resize)="onResize($event)">
+  <mat-grid-tile>1 <!-- <app-my-bar-chart style="margin: 50px;"></app-my-bar-chart> -->
+   </mat-grid-tile>
+  <mat-grid-tile>2</mat-grid-tile>
+  <mat-grid-tile>3</mat-grid-tile>
+  <mat-grid-tile>4</mat-grid-tile>
+  <mat-grid-tile>5</mat-grid-tile>
+  <mat-grid-tile>6</mat-grid-tile>
+</mat-grid-list>

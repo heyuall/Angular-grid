@@ -1,0 +1,7 @@
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 120%;
+  }
+  mat-grid-tile {
+    background: lightblue;
+  }
