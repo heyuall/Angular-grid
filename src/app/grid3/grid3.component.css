@@ -18,6 +18,8 @@
     grid-gap:2em;
     object-fit: fill;
      object-position: center;
+     justify-items: stretch;
+     align-items: stretch;
    
     
     
@@ -29,5 +31,10 @@
     border:#333 1px solid;
     padding:1em;
     object-position: center;
+    object-fit: fill;
+  }
+
+  .box3,.box4{
+    align-self:stretch;
     object-fit: fill;
   }

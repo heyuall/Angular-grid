@@ -13,6 +13,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MyBarChartComponent } from './my-bar-chart/my-bar-chart.component';
 
 import { HttpClientModule, /* other http imports */ } from "@angular/common/http";
+import { GridPrimengComponent } from './grid-primeng/grid-primeng.component';
+
+
 
 
 
@@ -22,7 +25,8 @@ import { HttpClientModule, /* other http imports */ } from "@angular/common/http
     GridComponent,
     Grid2Component,
     Grid3Component,
-    MyBarChartComponent
+    MyBarChartComponent,
+    GridPrimengComponent
   ],
   imports: [
     BrowserModule,
