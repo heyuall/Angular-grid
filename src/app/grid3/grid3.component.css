@@ -14,12 +14,20 @@
   .nested{
     display:grid;
     grid-template-columns:repeat(2, 1fr);
-    grid-auto-rows: auto;
-    grid-gap:1em;
+    grid-template-rows:1fr 1fr;
+    grid-gap:2em;
+    object-fit: fill;
+     object-position: center;
    
-    grid-auto-rows: minmax(auto, auto);
+    
+    
+    /* place-content: center;
+     justify-content: center;  */
   }
+
   .nested > div{
     border:#333 1px solid;
     padding:1em;
+    object-position: center;
+    object-fit: fill;
   }
