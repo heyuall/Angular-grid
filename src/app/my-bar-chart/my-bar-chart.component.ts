@@ -9,7 +9,7 @@ import { Chart } from 'chart.js';
 })
 export class MyBarChartComponent implements OnInit {
   chart:any  =  [];
-  constructor(private _weather: WeatherService) { }
+  constructor(public _weather: WeatherService) { }
   ngOnInit() {
     this._weather.dailyForecast()
       .subscribe(res => {

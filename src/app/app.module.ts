@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { WeatherService } from './weather.service';
-
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { GridComponent } from './grid/grid.component';
@@ -31,6 +31,7 @@ import { GridPrimengComponent } from './grid-primeng/grid-primeng.component';
   imports: [
     BrowserModule,
     FormsModule,
+    BrowserAnimationsModule,
    MatToolbarModule, 
    MatCardModule,
    FlexLayoutModule,

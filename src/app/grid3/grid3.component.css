@@ -15,11 +15,13 @@
     display:grid;
     grid-template-columns:repeat(2, 1fr);
     grid-template-rows:1fr 1fr;
-    grid-gap:2em;
+    grid-gap:1em;
     object-fit: fill;
-     object-position: center;
+    
      justify-items: stretch;
      align-items: stretch;
+    
+     object-position: center;
    
     
     

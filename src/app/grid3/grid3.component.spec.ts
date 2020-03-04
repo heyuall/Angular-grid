@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { WeatherService } from '../weather.service';
 import { Grid3Component } from './grid3.component';
 
 describe('Grid3Component', () => {
