@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarouselComponent  {
 
-  images = ['/home/houssem/my-ng5-app/src/assets/images/1.jpg','./assets/images/2.jpg','./assets/images/3.jpg'];
+  messages : string[] = ['message1','message2','message3'];
+  //images = ['./assets/images/1.jpg','./assets/images/2.jpg','./assets/images/3.jpg'];
 }
 
 
