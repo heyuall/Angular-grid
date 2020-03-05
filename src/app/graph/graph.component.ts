@@ -3,11 +3,11 @@ import { WeatherService } from '../weather.service';
 import { Chart } from 'chart.js';
 
 @Component({
-  selector: 'app-my-bar-chart',
-  templateUrl: './my-bar-chart.component.html',
-  styleUrls: ['./my-bar-chart.component.css']
+  selector: 'app-graph',
+  templateUrl: './graph.component.html',
+  styleUrls: ['./graph.component.css']
 })
-export class MyBarChartComponent implements OnInit {
+export class GraphComponent implements OnInit {
   chart:any  =  [];
   constructor(public _weather: WeatherService) { }
   ngOnInit() {
@@ -24,19 +24,19 @@ export class MyBarChartComponent implements OnInit {
           weatherDates.push(jsdate.toLocaleTimeString('en', { year: 'numeric', month: 'short', day: 'numeric'}))
         })
 
-        this.chart = new Chart('canvas', {
+        this.chart = new Chart('canvas2', {
           type: 'line',
           data: {
             labels: weatherDates,
             datasets: [
               {
                 data: temp_max,
-                borderColor: '#3cba9f',
+                borderColor: '#ffcc00',
                 fill: false
               },
               {
                 data: temp_min,
-                borderColor: '#ffcc00',
+                borderColor: '#3cba9f',
                 fill: false
               },
             ]

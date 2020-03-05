@@ -14,8 +14,11 @@ import { MyBarChartComponent } from './my-bar-chart/my-bar-chart.component';
 
 import { HttpClientModule, /* other http imports */ } from "@angular/common/http";
 import { GridPrimengComponent } from './grid-primeng/grid-primeng.component';
-
-
+import { CarouselComponent } from './carousel/carousel.component';
+import { GraphComponent } from './graph/graph.component';
+// import {CarouselModule} from 'primeng/carousel';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgbCarouselConfig}from'@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -26,7 +29,10 @@ import { GridPrimengComponent } from './grid-primeng/grid-primeng.component';
     Grid2Component,
     Grid3Component,
     MyBarChartComponent,
-    GridPrimengComponent
+    GridPrimengComponent,
+    CarouselComponent,
+    GraphComponent
+   
   ],
   imports: [
     BrowserModule,
@@ -36,9 +42,10 @@ import { GridPrimengComponent } from './grid-primeng/grid-primeng.component';
    MatCardModule,
    FlexLayoutModule,
    MatGridListModule,
-   HttpClientModule
+   HttpClientModule,
+   NgbModule
   ],
-  providers: [WeatherService],
+  providers: [WeatherService,NgbCarouselConfig],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
