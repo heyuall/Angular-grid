@@ -19,6 +19,7 @@ import { GraphComponent } from './graph/graph.component';
 // import {CarouselModule} from 'primeng/carousel';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {NgbCarouselConfig}from'@ng-bootstrap/ng-bootstrap';
+import { NgMarqueeModule } from "ng-marquee-improved";
 
 
 
@@ -43,7 +44,8 @@ import {NgbCarouselConfig}from'@ng-bootstrap/ng-bootstrap';
    FlexLayoutModule,
    MatGridListModule,
    HttpClientModule,
-   NgbModule
+   NgbModule,
+   NgMarqueeModule
   ],
   providers: [WeatherService,NgbCarouselConfig],
   bootstrap: [AppComponent]
