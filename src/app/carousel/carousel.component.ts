@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarouselComponent  {
 
-  messages : string[] = ['message1','Bonjour','Joyeux Fête !!'];
+  messages : Array <any> = ['Bonjour',"hello !!" ];
   //images = ['./assets/images/1.jpg','./assets/images/2.jpg','./assets/images/3.jpg'];
 }
 

@@ -20,6 +20,10 @@ import { GraphComponent } from './graph/graph.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {NgbCarouselConfig}from'@ng-bootstrap/ng-bootstrap';
 import { NgMarqueeModule } from "ng-marquee-improved";
+import { AppRoutingModule } from './/app-routing.module';
+import { MessageComponent } from './message/message.component';
+import { MainGridComponent } from './main-grid/main-grid.component';
+
 
 
 
@@ -32,7 +36,9 @@ import { NgMarqueeModule } from "ng-marquee-improved";
     MyBarChartComponent,
     GridPrimengComponent,
     CarouselComponent,
-    GraphComponent
+    GraphComponent,
+    MessageComponent,
+    MainGridComponent
    
   ],
   imports: [
@@ -45,7 +51,10 @@ import { NgMarqueeModule } from "ng-marquee-improved";
    MatGridListModule,
    HttpClientModule,
    NgbModule,
-   NgMarqueeModule
+   NgMarqueeModule,
+   AppRoutingModule
+   
+   
   ],
   providers: [WeatherService,NgbCarouselConfig],
   bootstrap: [AppComponent]

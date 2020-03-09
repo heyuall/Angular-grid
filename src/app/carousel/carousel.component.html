@@ -1,18 +1,10 @@
 
 <ngb-carousel *ngIf="messages" >
-  <ng-template ngbSlide>
-    <div style="text-align: center;">
-      <h3> {{messages[0]}} </h3> 
+  <ng-template ngbSlide *ngFor="let message of messages" >
+    <div style="text-align: center; padding: 2em;">
+      <h3 class="animated  flash "> <strong> {{message}} </strong></h3> 
   </div>  
   </ng-template>
-  <ng-template ngbSlide>
-    <div style="text-align: center;">
-      <h3>{{messages[1]}}</h3>
-     </div>  
-  </ng-template>
-  <ng-template ngbSlide>
-    <div style="text-align: center;">
-      <h3 > {{messages[2]}} </h3> 
-     </div>  
-  </ng-template>
+  
+  
 </ngb-carousel>
