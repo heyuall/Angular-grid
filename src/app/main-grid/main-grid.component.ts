@@ -7,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./main-grid.component.css']
 })
 export class MainGridComponent implements OnInit {
-
+value : string =""
   constructor(private route: ActivatedRoute) {
     
   }
