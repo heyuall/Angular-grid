@@ -1,4 +1,6 @@
 import { Component , VERSION, ViewChild} from '@angular/core';
+import { ActivatedRoute } from '@angular/router';   
+
 
 
 @Component({
@@ -10,7 +12,9 @@ export class AppComponent {
   title = 'app';
   
   
-  constructor() {}
+  constructor(private route: ActivatedRoute) {
+    
+  }
 
   
 }
