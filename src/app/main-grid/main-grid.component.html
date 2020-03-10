@@ -9,24 +9,23 @@
     <!-- <app-grid3></app-grid3> -->
     
 
-    <mdb-carousel  [interval]="1500">
-      <!--First slide-->
-      <mdb-slide *ngFor="let message of messages" >
-        <div style="text-align: center; padding: 2em;"  >
-          <h3 class="animated {{value}} "> <strong> {{message}} </strong></h3> 
-      </div>  
-      </mdb-slide>
-    </mdb-carousel>
-    <ul>
-      <li *ngFor="let message of messages">
-        {{ message }}
-      </li>
-    </ul>
+    
+    
 
   </main>
 
 
   <footer>
-    <app-carousel></app-carousel>
+    
+    <!-- <app-carousel></app-carousel> -->
+   
+   
+    <mdb-carousel  [interval]="1500">
+           <mdb-slide *ngFor="let message of messages" >
+        <div style="text-align: center; padding: 2em;"  >
+          <h3 class="animated {{value}} "> <strong> {{message}} </strong></h3> 
+      </div>  
+      </mdb-slide>
+    </mdb-carousel>
   </footer>
 </body>

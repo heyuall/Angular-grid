@@ -9,7 +9,7 @@ import { MessageDataService } from '../message-data.service';
   styleUrls: ['./main-grid.component.css']
 })
 export class MainGridComponent implements OnInit {
-value : string =" shake";
+value : string ="flash";
 messages : any;
 
   constructor(private _data: MessageDataService,private route: ActivatedRoute,private router: Router) {
