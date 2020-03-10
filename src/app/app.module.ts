@@ -24,6 +24,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { MessageComponent } from './message/message.component';
 import { MainGridComponent } from './main-grid/main-grid.component';
 import { CarouselModule,MDBBootstrapModule } from 'angular-bootstrap-md';
+import { MessageDataService } from './message-data.service';
 
 
 
@@ -56,11 +57,12 @@ import { CarouselModule,MDBBootstrapModule } from 'angular-bootstrap-md';
    AppRoutingModule,
    CarouselModule,
    MDBBootstrapModule.forRoot()
-   
-   
-   
+    ],
+  providers: [
+    WeatherService,
+    NgbCarouselConfig,
+    MessageDataService
   ],
-  providers: [WeatherService,NgbCarouselConfig],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA]
 })

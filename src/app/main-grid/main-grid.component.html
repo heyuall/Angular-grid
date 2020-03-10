@@ -11,27 +11,17 @@
 
     <mdb-carousel  [interval]="1500">
       <!--First slide-->
-      <mdb-slide>
-        <div style="text-align: center; padding: 2em;">
-          <h3 class="animated {{value}} "> <strong> Hello </strong></h3> 
+      <mdb-slide *ngFor="let message of messages" >
+        <div style="text-align: center; padding: 2em;"  >
+          <h3 class="animated {{value}} "> <strong> {{message}} </strong></h3> 
       </div>  
       </mdb-slide>
-      <!--/First slide-->
-      <!--Second slide-->
-      <mdb-slide>
-        <div style="text-align: center; padding: 2em;">
-          <h3 class="animated pulse" > <strong> Salut </strong></h3> 
-      </div>  
-      </mdb-slide>
-      <!--/Second slide-->
-      <!--Third slide-->
-      <mdb-slide>
-        <div style="text-align: center; padding: 2em;">
-          <h3 class="animated pulse"> <strong> Welcome </strong></h3> 
-      </div>  
-      </mdb-slide>
-      <!--/Third slide-->
     </mdb-carousel>
+    <ul>
+      <li *ngFor="let message of messages">
+        {{ message }}
+      </li>
+    </ul>
 
   </main>
 

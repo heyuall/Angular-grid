@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'; 
 import { trigger,style,transition,animate,keyframes,query,stagger } from '@angular/animations';
+import { MessageDataService } from '../message-data.service';
 
 @Component({
   selector: 'app-message',
@@ -36,26 +37,35 @@ export class MessageComponent {
   messageCount: number;
   btnText: string = 'Ajouter';
   messageText: string; 
-  messages = ['Bonne Année', 'Bienvenue', 'Bonne Fête'];
+  messages = [];
 
 
-  constructor( private router: Router) {  }
+  constructor( private _data: MessageDataService,private router: Router) {  }
 
   sendMeHome() {
     this.router.navigate(['']);
   }
   ngOnInit() {
+   
+    
+    this._data.message.subscribe(res => this.messages = res);
     this.messageCount = this.messages.length;
+    this._data.changeMessage(this.messages);
+    
   }
 
   addItem() {
     this.messages.push(this.messageText);
     this.messageText = '';
     this.messageCount = this.messages.length;
+    this._data.changeMessage(this.messages);
+    
     console.log("after addItem: ", this.messages);
   }
-  removeItem(i) {
+  removeItem(i: number) {
     this.messages.splice(i, 1);
+    this._data.changeMessage(this.messages);
+    this.messageCount = this.messages.length;
     console.log("after remoeveItem: ", this.messages);
   }
 
