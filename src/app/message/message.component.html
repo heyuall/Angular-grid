@@ -22,7 +22,7 @@
   </div>
   <div class="col">
     <p> Cliquer pour supprimer:  </p>
-    <p class="message-container" *ngFor="let message of messages">
+    <p class="message-container" *ngFor="let message of messages; let i = index" (click)="removeItem(i)">
       {{ message }}
     </p>
    
