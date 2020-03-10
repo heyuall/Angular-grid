@@ -1,25 +1,27 @@
 
 <div class="container color-dark">
   <div class="col">
-    <p>Ajouter un Message</p>
+    <p> <strong> Ajouter un Message </strong> </p>
   </div>
   <div class="col">
-    <p>Vos Messages ({{messageCount}})</p>
+    <p  > <strong> Vos Messages ({{messageCount}}) </strong> </p>
+    
   </div>
 </div>
 
-<div class="container color-light">
+<div class="container color-light" [@messages]="messages.length">
   <div class="col">
-    <p class="sm"> Ajouter votre message à diffuser ici: </p>
+    <p > Ajouter votre message à diffuser ici: </p>
 
     <form>
       <input type="text" class="txtt" name="item" placeholder="Message..."  [(ngModel)]="messageText" >
-      <br><span>{{ messageText }}</span><br>
+     
 
       <input type="submit" class="btnn" [value]="btnText" (click)="addItem()">
     </form>
   </div>
   <div class="col">
+    <p> Cliquer pour supprimer:  </p>
     <p class="message-container" *ngFor="let message of messages">
       {{ message }}
     </p>
