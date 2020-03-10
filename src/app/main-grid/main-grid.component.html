@@ -7,40 +7,27 @@
     <!-- <app-grid3 style="place-content: center; "></app-grid3> -->
     <!-- <app-grid-primeng></app-grid-primeng> -->
     <!-- <app-grid3></app-grid3> -->
-    <div class="demo-1">
-      <h3>Lorem ipsum...</h3>
+    
 
-    </div>
-    <ng-marquee>
-      <mark>Hello, World....</mark>
-      <mark> Bonjour </mark>
-    </ng-marquee>
-    <marquee behavior="alternate">
-      <div> Scrolling Slide Text </div>
-      <div>Bonjour :) !! </div>
-
-
-    </marquee>
-
-    <mdb-carousel  [interval]="2000">
+    <mdb-carousel  [interval]="1500">
       <!--First slide-->
       <mdb-slide>
         <div style="text-align: center; padding: 2em;">
-          <h3 > <strong> Hello </strong></h3> 
+          <h3 class="animated {{value}} "> <strong> Hello </strong></h3> 
       </div>  
       </mdb-slide>
       <!--/First slide-->
       <!--Second slide-->
       <mdb-slide>
         <div style="text-align: center; padding: 2em;">
-          <h3 > <strong> Salut </strong></h3> 
+          <h3 class="animated pulse" > <strong> Salut </strong></h3> 
       </div>  
       </mdb-slide>
       <!--/Second slide-->
       <!--Third slide-->
       <mdb-slide>
         <div style="text-align: center; padding: 2em;">
-          <h3 > <strong> Welcome </strong></h3> 
+          <h3 class="animated pulse"> <strong> Welcome </strong></h3> 
       </div>  
       </mdb-slide>
       <!--/Third slide-->

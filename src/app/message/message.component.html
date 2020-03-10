@@ -4,27 +4,29 @@
     <p>Ajouter un Message</p>
   </div>
   <div class="col">
-    <p>Vos Messages</p>
+    <p>Vos Messages ({{messageCount}})</p>
   </div>
 </div>
 
 <div class="container color-light">
   <div class="col">
-    <p class="sm">Ajouter votre message à diffuser ici: </p>
+    <p class="sm"> Ajouter votre message à diffuser ici: </p>
 
     <form>
-      <input type="text" class="txt" name="item" placeholder="Message..">
-      <input type="submit" class="btn" value="Ajouter">
+      <input type="text" class="txtt" name="item" placeholder="Message..."  [(ngModel)]="messageText" >
+      <br><span>{{ messageText }}</span><br>
+
+      <input type="submit" class="btnn" [value]="btnText" (click)="addItem()">
     </form>
   </div>
   <div class="col">
-    <p class="message-container">
-      Bonjour tt le monde !
+    <p class="message-container" *ngFor="let message of messages">
+      {{ message }}
     </p>
    
   </div>
    <div > 
-    <a href="" (click)="sendMeHome()" class="animated infinite bounce"><strong> Retourner à l'afficheur </strong></a>
+    <a href="" (click)="sendMeHome()" ><strong> Retourner à l'afficheur </strong></a>
 </div>
 
 <h1 class="animated infinite bounce">Example</h1>
